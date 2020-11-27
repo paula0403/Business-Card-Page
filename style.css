@@ -48,7 +48,7 @@ ul.menu li:nth-child(2){
 header{
   position:relative;
   margin-top:10vh;
-  height: 60vh;
+  height: 80vh;
   background-image: url(img/angora-440165_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,23 +71,34 @@ div.logo{
 }
 .container{
   margin:20px auto;
+
   
 }  
 .grid{
 
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: repeat(5 1fr);
   grid-gap:8px;
   padding: 8px;
+  
+  
+  
   
 }
 .grid-item{
   display:grid;
+  overflow: hidden;
 }
 .grid-item img{
-  width:50%;
-  justify-self: center;
+  width:100%;
+  cursor: zoom-in;
+  transition: .3s;
+  
+}
+.grid-item img:hover{
+  transform: scale(1.2);
+  opacity:0.8;
 }
 .grid-item p{
   justify-self: center;
@@ -124,8 +135,16 @@ grid-row: 4/5;
 grid-column: 2/3;
 grid-row: 4/5;
 }
+.grid-item9{
+  grid-column: 1/2;
+  grid-row: 5/6;
+  }
+  .grid-item10{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  }
 div.baner{
-  height: 80vh;
+  height: 90vh;
   
   
   position: relative;
