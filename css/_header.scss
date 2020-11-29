@@ -1,0 +1,21 @@
+.logo-pic{
+  position:relative;
+  margin-top:10vh;
+  height: 80vh;
+  background-image: url(img/angora-440165_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.logo{
+  position: absolute;
+  left:15%;
+  top:15%;
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  width: 25%;
+  height: 65%;
+  background-image: url(img/logo.jpg);
+}

@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav>
-    <ul class='menu'>
+  <header class="logo-pic">
+    <div class="logo"></div>
+  </header>
+  <nav class="menu">
+    <ul class="menu-list">
       <li><a href='https://www.facebook.com/The-Something-From-Nothing-393430344142014/'><i
             class="fab fa-facebook-f"></i></a></li>
       <li><i class="fab fa-instagram"></i></li>
@@ -25,56 +29,23 @@
     </ul>
   </nav>
 
-  <header>
-    <div class='logo'></div>
-  </header>
-  <main>
-    <!--<div class="container">
-      <div class="flex-item">
-        <div><img src="img/DSC_0714.JPG" alt=""></div>
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates fugit alias distinctio minus
-            ducimus repudiandae fugiat aliquam nobis asperiores. Eligendi minima porro voluptatum in, iusto ad quidem
-            nobis ut?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae asperiores deserunt
-            obcaecati tempora repellat delectus ut dolor, beatae doloribus modi, quaerat animi aliquid! Non minus id a
-            at vel!</p>
-        </div>
-      </div>
-      <div class="flex-item">
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates fugit alias distinctio minus
-            ducimus repudiandae fugiat aliquam nobis asperiores. Eligendi minima porro voluptatum in, iusto ad quidem
-            nobis ut?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae asperiores deserunt
-            obcaecati tempora repellat delectus ut dolor, beatae doloribus modi, quaerat animi aliquid! Non minus id a
-            at vel!</p>
-        </div>
-        <div><img src="img/DSC_1134.JPG" alt=""></div>
-      </div>
-      <div class="flex-item">
-        <div><img src="img/DSC_0317.JPG" alt=""></div>
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates fugit alias distinctio minus
-            ducimus repudiandae fugiat aliquam nobis asperiores. Eligendi minima porro voluptatum in, iusto ad quidem
-            nobis ut?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae asperiores deserunt
-            obcaecati tempora repellat delectus ut dolor, beatae doloribus modi, quaerat animi aliquid! Non minus id a
-            at vel!</p>
-        </div>
-      </div>
-      <div class="flex-item">
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates fugit alias distinctio minus
-            ducimus repudiandae fugiat aliquam nobis asperiores. Eligendi minima porro voluptatum in, iusto ad quidem
-            nobis ut?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae asperiores deserunt
-            obcaecati tempora repellat delectus ut dolor, beatae doloribus modi, quaerat animi aliquid! Non minus id a
-            at vel!</p>
-        </div>
-        <div><img src="img/DSC_1020.JPG" alt=""></div>
-      </div>
+  <section class="about">
+    <h1>About me</h1>
+    <div class="about-content">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor iusto, modi veritatis molestias optio
+        consequatur maiores at mollitia in non iste commodi culpa dolorum vel vero incidunt! Accusamus,Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Commodi quae nihil corrupti iure. Consequatur, qui? Quos debitis ab id
+        ipsum necessitatibus provident laudantium ipsa eos cupiditate? Accusantium cumque obcaecati Lorem ipsum dolor
+        sit
+        amet consectetur adipisicing elit. Sunt debitis sapiente optio iure velit rerum labore officia quasi possimus
+        maiores id recusandae quia perspiciatis quas magni, fugit excepturi? Molestiae, odit.
+      </p>
+    </div>
+  </section>
 
-
-    </div>-->
-
+  <section class='projects'>
     <div class="container">
+      <h1>My projects</h1>
       <div class="grid">
         <div class="grid-item grid-item1"><img src="img/dsc_07911.jpg" alt=""></div>
         <div class="grid-item grid-item2">
@@ -119,14 +90,30 @@
         </div>
       </div>
     </div>
-    <div class="baner">
+  </section>
+  <section class="baner">
+    <div class="baner-item">
       <img src="img/20151214_091041.jpg">
       <img src="img/20151214_091239.jpg">
     </div>
+  </section>
+  <section class="contact">
+    <h1>Contact</h1>
+    <div class="contact-wrap">
+      <form>
+        <input class="contact-element" type="text" placeholder="Your name">
+        <input class="contact-element" type="text" placeholder="E-mail">
+        <textarea class="contact-text" placeholder="Type Your message"></textarea>
+        <button class="contact-btn">Search</button>
+      </form>
+      <div class="contact-details">
+        <div class="social"><i class="fas fa-envelope-square"></i><span>mail@domena.pl</span></div>
+        <div class="social"><i class="fas fa-mobile-alt"></i><span>+48 781781781</span></div>
+      </div>
+    </div>
+  </section>
 
-  </main>
-
-  <footer></footer>
+  <footer class="end">&copy; Paulina Lipińska</footer>
 
 
 </body>

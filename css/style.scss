@@ -1,0 +1,16 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+h1{
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+}
+@import 'header';
+@import 'nav';
+@import 'section-about';
+@import 'section-projects';
+@import 'section-baner';
+@import 'section-contact';
+@import 'footer';

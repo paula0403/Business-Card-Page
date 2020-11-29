@@ -1,0 +1,36 @@
+.menu{
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  height: 10vh;
+  width: 100%;
+  background-color:rgb(170, 219, 221);
+  
+}
+.menu-list{
+  display:flex;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+   
+  }
+.menu-list>li{
+  cursor: pointer;
+  color:#40464d;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-family: "Raleway",sans-serif;
+  font-size: 1.3em;
+  transition:.2s;
+  }
+.menu-list a{
+    color:#40464d;
+  }
+.menu-list>li:hover,.menu-list a:hover{
+    color:#a67c52;
+  }
+.menu-list li:nth-child(2){
+  flex-grow: 1;
+  }

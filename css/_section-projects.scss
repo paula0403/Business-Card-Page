@@ -1,0 +1,74 @@
+.projects .container{
+  margin:20px auto;
+}
+.projects .container h1{
+  text-align: center;
+  text-transform: uppercase;
+  
+  }
+.projects .grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: repeat(5 1fr);
+  grid-gap:40px;
+  padding: 0 40px;  
+}
+.grid-item{
+  display:grid;
+  overflow: hidden;
+}
+.grid-item img{
+  width:100%;
+  cursor: zoom-in;
+  transition: .4s;
+  
+}
+.grid-item img:hover{
+  transform: scale(1.2);
+  opacity:.8;
+}
+.grid-item p{
+align-self: center;  
+font-family:"Raleway",sans-serif;
+text-align:center;
+line-height: 1.5em;  
+}
+.grid-item1{
+grid-column: 1/2;
+  }
+.grid-item2{
+grid-column: 2/3;
+}
+.grid-item3{
+grid-column: 1/2;
+grid-row: 2/3;
+}
+.grid-item4{
+grid-column: 2/3;
+grid-row: 2/3;
+}
+.grid-item5{
+grid-column: 1/2;
+grid-row: 3/4;
+}
+.grid-item6{
+grid-column: 2/3;
+grid-row: 3/4;
+}
+.grid-item7{
+grid-column: 1/2;
+grid-row: 4/5;
+}
+.grid-item8{
+grid-column: 2/3;
+grid-row: 4/5;
+}
+.grid-item9{
+  grid-column: 1/2;
+  grid-row: 5/6;
+  }
+.grid-item10{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  }

@@ -3,8 +3,12 @@
   padding:0;
   box-sizing: border-box;
 }
+h1{
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+}
 
-nav{
+.menu{
   position:fixed;
   z-index:1;
   top:0;
@@ -14,38 +18,33 @@ nav{
   background-color:rgb(170, 219, 221);
   
 }
-ul.menu{
+.menu-list{
   display:flex;
   height: 100%;
   align-items: center;
   list-style: none;
    
-}
-ul.menu>li{
+  }
+.menu-list>li{
   cursor: pointer;
   color:#40464d;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 20px;
   font-family: "Raleway",sans-serif;
+  font-size: 1.3em;
   transition:.2s;
   }
-  ul.menu a{
+.menu-list a{
     color:#40464d;
   }
-  ul.menu>li:hover{
+.menu-list>li:hover,.menu-list a:hover{
     color:#a67c52;
   }
-  ul.menu a:hover{
-    color:#a67c52;
-  }
-
-
-
-ul.menu li:nth-child(2){
+.menu-list li:nth-child(2){
   flex-grow: 1;
-}
-header{
+  }
+.logo-pic{
   position:relative;
   margin-top:10vh;
   height: 80vh;
@@ -55,36 +54,49 @@ header{
   background-position: center;
   background-attachment: fixed;
 }
-div.logo{
+.logo{
   position: absolute;
-  
   left:15%;
   top:15%;
   background-size:cover;
   background-position: center;
-  
   background-repeat:no-repeat;
   width: 25%;
   height: 65%;
-  
   background-image: url(img/logo.jpg);
 }
-.container{
+.about{
+  height: 35vh;
+  margin-top:40px;
+}
+.about h1{
+  text-align: center;
+  text-transform: uppercase;
+  }
+.about-content{
+  margin: 30px ;
+}
+.about-content p{
+  font-family:"Raleway",sans-serif;
+  text-align:center;
+  line-height: 1.5em;
+  font-size:1em;
+}
+.projects .container{
   margin:20px auto;
-
+}
+.projects .container h1{
+  text-align: center;
+  text-transform: uppercase;
   
-}  
-.grid{
-
+  }
+.projects .grid{
+  margin-top:40px;
   display:grid;
   grid-template-columns: repeat(2 1fr);
   grid-template-rows: repeat(5 1fr);
-  grid-gap:8px;
-  padding: 8px;
-  
-  
-  
-  
+  grid-gap:40px;
+  padding: 0 40px;  
 }
 .grid-item{
   display:grid;
@@ -93,17 +105,18 @@ div.logo{
 .grid-item img{
   width:100%;
   cursor: zoom-in;
-  transition: .3s;
+  transition: .4s;
   
 }
 .grid-item img:hover{
   transform: scale(1.2);
-  opacity:0.8;
+  opacity:.8;
 }
 .grid-item p{
-  justify-self: center;
-  align-self: center;
-  
+align-self: center;  
+font-family:"Raleway",sans-serif;
+text-align:center;
+line-height: 1.5em;  
 }
 .grid-item1{
 grid-column: 1/2;
@@ -139,34 +152,32 @@ grid-row: 4/5;
   grid-column: 1/2;
   grid-row: 5/6;
   }
-  .grid-item10{
+.grid-item10{
   grid-column: 2/3;
   grid-row: 5/6;
   }
-div.baner{
+  
+.baner-item{
+  margin-top: 90px;
   height: 90vh;
-  
-  
   position: relative;
 }
-div.baner img{
+.baner-item img{
   position: absolute;
   left:50%;
   top:0;
   transform:translate(-50%,0);
 }
-div.baner img:nth-child(2){
+.baner-item img:nth-child(2){
   animation: slider 5s linear infinite;
 }
 @keyframes slider{
   0%{
       opacity:0;
   }
-  
   50%{
     opacity:0;
   }    
-  
   50.01%{
       opacity:1;
   }
@@ -174,7 +185,81 @@ div.baner img:nth-child(2){
       opacity:1;
   }
 }
-footer{
+.contact {
+  background-color: #000;
+  padding: 40px;
+  height: 70vh;
+}
+
+.contact h1 {
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+}
+.contact-wrap {
+  font-family: "Raleway",sans-serif;
+  padding-top: 20px;
+  margin: 0 auto;
+  display:flex;
+  justify-content: flex-start;
+}
+
+.contact-element, .contact-btn, .contact-text{
+  width: 80%;
+  margin-bottom: 25px;
+  padding: 5px;
+  font-family: "Raleway",sans-serif;
+  font-size:1em;
+  
+}
+
+.contact-element{
+  height: 13%;
+}
+
+.contact-text {
+  height: 30%;
+}
+.contact-btn {
+  line-height: 1.5em;
+  font-size: 1em;
   background-color: black;
+  color: white;
+  border: 2px solid white;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  color: black;
+  background-color: #fff;
+}
+.contact-details{
+  flex-basis: 50%;
+}
+
+.contact-details .social {
+  padding: 10px 0;
+  color: white;
+  }
+
+.contact-details .social span {
+  line-height: 72px;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+.contact-details .fas{
+  font-size:1.5em;
+}
+
+
+.end{
+  background-color:rgb(170, 219, 221);
+  text-align: center;
+  padding: 20px;
+  font-family: "Raleway",sans-serif;
+  font-size: 1.2em;
   height: 10vh;
 }
