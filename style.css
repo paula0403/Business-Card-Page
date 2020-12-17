@@ -29,32 +29,30 @@ h1{
   display:flex;
   height: 100%;
   align-items: center;
+  justify-content: flex-end;
   list-style: none;
-  padding: 0 3%;
+  padding:0 5%;
    
   }
 .menu-list>li{
   cursor: pointer;
   color:#40464d;
-  padding:0 2%;
+  padding:0 5%;
   text-transform: uppercase;
   font-family: "Raleway",sans-serif;
   font-size: 1.3em;
   transition:.2s;
   }
 .menu-list a{
+    display:block;
+    width:100%;
     color:#40464d;
     text-decoration: none;
   }
-.menu-list>li:hover,.menu-list a:hover{
-    color:#a67c52;
+.menu-list>li:hover{
+    
+    box-shadow: 5px 5px 15px 5px #a67c52;
   }
-.menu-list li:nth-child(2){
-  flex-grow: 1;
-  }
-
- 
-  
 .logo-pic{
   position:relative;
   margin-top:10vh;
