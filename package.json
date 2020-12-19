@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/paula0403/Business-Card-Page#readme",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "sass": "^1.30.0"
   }
 }

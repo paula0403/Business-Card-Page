@@ -1,8 +1,27 @@
 .end{
+  
   background-color:rgb(170, 219, 221);
   text-align: center;
-  padding: 20px;
   font-family: "Raleway",sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  line-height: 10vh;
   height: 10vh;
 }
+@media screen and (max-width:992px) and (orientation:landscape){
+  .end{
+    height: 10vw;
+    line-height: 10vw;
+  }
+}
+@media screen and (max-width:767px) {
+  .end{
+    font-size:1.2em;
+  }    
+}
+@media screen and (max-width:767px) and (orientation:landscape){
+  .end{
+    height: 10vw;
+    line-height: 10vw;
+  }
+}
+  

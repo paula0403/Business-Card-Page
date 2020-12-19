@@ -1,3 +1,12 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+h1{
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+}
 .logo-pic{
   position:relative;
   margin-top:10vh;
@@ -10,12 +19,35 @@
 }
 .logo{
   position: absolute;
-  left:15%;
+  left:10%;
   top:15%;
-  background-size:cover;
+  background-size:contain;
   background-position: center;
   background-repeat:no-repeat;
-  width: 25%;
-  height: 65%;
+  width: 50%;
+  height: 70%;
   background-image: url(img/logo.jpg);
+}
+@media screen and (max-width:1200px){
+  .logo-pic{
+    height: 60vh;
+  }
+};
+@media screen and (max-width:992px){
+  .logo-pic{
+    margin-top: 0;
+    height: 70vh;
+  }
+  .logo{
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background-size: contain;
+  }
+}
+@media screen and (max-width:992px) and (orientation:landscape){
+  
+  .logo-pic{
+    height: 50vw;
+  }
 }

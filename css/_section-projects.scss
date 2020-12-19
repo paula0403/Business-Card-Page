@@ -1,74 +1,151 @@
 .projects .container{
-  margin:20px auto;
+  margin:15% auto;
 }
 .projects .container h1{
   text-align: center;
   text-transform: uppercase;
-  
-  }
-.projects .grid{
-  margin-top:40px;
+   }
+.projects .box-flow{
+  margin-top:5%;
   display:grid;
   grid-template-columns: repeat(2 1fr);
   grid-template-rows: repeat(5 1fr);
-  grid-gap:40px;
-  padding: 0 40px;  
+  grid-gap:5%;
+  padding: 0 5%;  
 }
-.grid-item{
+.item{
   display:grid;
   overflow: hidden;
 }
-.grid-item img{
+.item img{
   width:100%;
   cursor: zoom-in;
   transition: .4s;
   
 }
-.grid-item img:hover{
+.item img:hover{
   transform: scale(1.2);
   opacity:.8;
 }
-.grid-item p{
+.item p{
 align-self: center;  
 font-family:"Raleway",sans-serif;
 text-align:center;
 line-height: 1.5em;  
 }
-.grid-item1{
+.item .more {
+  margin-top:2%;
+  padding:2% 4%;
+  color:#40464d;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px 5px #40464d;
+  cursor:pointer;
+  transition: .2s;
+}
+.item .more:hover{
+  background-color:rgb(170, 219, 221);
+}
+.item1{
 grid-column: 1/2;
   }
-.grid-item2{
+.item2{
 grid-column: 2/3;
 }
-.grid-item3{
+.item3{
 grid-column: 1/2;
 grid-row: 2/3;
 }
-.grid-item4{
+.item4{
 grid-column: 2/3;
 grid-row: 2/3;
 }
-.grid-item5{
+.item5{
 grid-column: 1/2;
 grid-row: 3/4;
 }
-.grid-item6{
+.item6{
 grid-column: 2/3;
 grid-row: 3/4;
 }
-.grid-item7{
+.item7{
 grid-column: 1/2;
 grid-row: 4/5;
 }
-.grid-item8{
+.item8{
 grid-column: 2/3;
 grid-row: 4/5;
 }
-.grid-item9{
+.item9{
   grid-column: 1/2;
   grid-row: 5/6;
   }
-.grid-item10{
+.item10{
   grid-column: 2/3;
   grid-row: 5/6;
+  } 
+  @media screen and (max-width:1200px) and (orientation:landscape){
+    
+    .item p{
+      font-size:.8em;
+    }
+  }
+  @media screen and (max-width:992px){
+    .item p{
+      font-size:.6em;
+    }
+    .item .more{
+      font-size:.8em;
+    }
+  }
+  @media screen and (max-width:767px) {
+    .projects .container{
+      margin:20% auto 0 auto;
+    }
+    .projects .box-flow{
+      display:flex;
+      flex-direction: column;
+    }
+    .item{
+      padding: 5% 0;
+    }
+    .item .more{
+      box-shadow: 5px 5px 5px 5px #40464d;
+    }
+    .item1{
+      order:1;
+    }
+    .item2{
+      order:2;
+    }
+    .item3{
+      order:4;
+    }
+    .item4{
+      order:3;
+    }
+    .item5{
+      order:5;
+    }
+    .item6{
+      order:6;
+    }
+    .item7{
+      order:8;
+    }
+    .item8{
+      order:7;
+    }
+    .item9{
+      order:9;
+    }
+    .item10{
+      order:10;
+    }
+  }
+  @media screen and (max-width:767px) and (orientation:landscape){
+    .item img{
+      width: 80%;
+      margin:0 auto;
+    }
   }

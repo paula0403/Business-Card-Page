@@ -1,3 +1,9 @@
+.hamburger, .close{
+  position:fixed;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+  cursor:pointer;
+}
 .menu{
   position:fixed;
   z-index:1;
@@ -5,32 +11,118 @@
   left:0;
   height: 10vh;
   width: 100%;
-  background-color:rgb(170, 219, 221);
+  
   
 }
 .menu-list{
+  background-color:rgb(170, 219, 221);
   display:flex;
   height: 100%;
   align-items: center;
+  justify-content: flex-end;
   list-style: none;
+  padding:0 5%;
    
   }
 .menu-list>li{
-  cursor: pointer;
+  
   color:#40464d;
-  text-decoration: none;
+  padding:0 3%;
   text-transform: uppercase;
-  padding: 0 20px;
   font-family: "Raleway",sans-serif;
   font-size: 1.3em;
   transition:.2s;
   }
-.menu-list a{
-    color:#40464d;
-  }
-.menu-list>li:hover,.menu-list a:hover{
-    color:#a67c52;
-  }
 .menu-list li:nth-child(2){
-  flex-grow: 1;
+  flex-grow:1;
+}
+
+.menu-list a{
+    
+    cursor:pointer;
+    width:100%;
+    color:#40464d;
+    text-decoration: none;
   }
+.menu-list a:hover{
+    
+    color: #a67c52;
+  }
+  @media screen and (max-width:992px){
+    .menu{
+      left:-35%;
+      width:35%;
+      top: 10%;
+      height:50vh;
+      transition:left .5s ease-in-out;
+    }
+    .menu-list{
+      margin-top: 40%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 8% 5%;
+    }
+    .menu-list li:nth-child(2){
+      flex-grow: 0;
+      }
+      .menu-list>li{
+        font-size:1.5em;
+      }
+      
+      .hamburger{
+        opacity:1;
+        left:10%;
+        top:10%;
+        font-size:3em;
+        color:#000;
+  }
+      .close{
+        opacity:0;
+        left:10%;
+        top:10%;
+        font-size: 3em;
+        color:#000;
+      }
+      .menu:hover>.hamburger{
+        opacity:0;
+      }
+      .menu:hover>.close{
+        z-index:99;
+        opacity:1;
+      
+      }
+      .menu:hover{
+        left:0;
+      }
+    }
+    @media screen and (max-width:992px) and (orientation:landscape){
+      .menu{
+        height: 50vw;
+        width: 30%;
+        left:-30%;
+      }
+    }
+    @media screen and (max-width:767px) {
+      .menu{
+        height: 60vh;
+        width: 50%;
+        left:-50%;
+      }
+      .menu-list>i{
+        font-size: 1em;
+      }
+    }
+    @media screen and (max-width:767px) and (orientation:landscape){
+      .menu{
+        height: 50vw;
+        width: 35%;
+        left:-35%;
+      }
+    }
+    @media screen and (max-width:360px){
+      .menu{
+        width: 55%;
+        left:-55%;
+      }
+    }

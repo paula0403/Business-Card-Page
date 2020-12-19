@@ -1,17 +1,66 @@
 .about{
   height: 35vh;
-  margin-top:40px;
+  margin-top:5%;
 }
 .about h1{
   text-align: center;
   text-transform: uppercase;
   }
 .about-content{
-  margin: 30px ;
+  margin: 3% ;
 }
 .about-content p{
   font-family:"Raleway",sans-serif;
   text-align:center;
   line-height: 1.5em;
   font-size:1em;
+}
+.tech{
+  margin:3% auto 0;
+  display:block;
+}
+@media screen and (max-width:1200px){
+  
+  .about{
+    height: 20vh;
+  }
+}
+@media screen and (max-width:1200px) and (orientation:landscape){
+  .about{
+    height: 25vw;
+  }
+}
+@media screen and (max-width:992px){
+  .about{
+    height: 30vh;
+  }
+  .about-content p{
+    font-size:.8em;
+  }
+}
+@media screen and (max-width:992px) and (orientation:landscape){
+  
+  .about{
+    height: 35vw;
+  }
+}
+@media screen and (max-width:767px) {
+  
+  .about{
+    height: 55vh;
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width:767px) and (orientation:landscape){
+  
+  .about{
+    margin-top: 10%;
+    height: 45vw;
+  }
+}
+@media screen and (max-width:360px){
+  
+  .about{
+    height: 80vh;
+  }
 }

@@ -1,19 +1,19 @@
 .contact {
-  background-color: #000;
-  padding: 40px;
-  height: 70vh;
+  background-color: #40464d;
+  padding: 5%;
+  height: 80vh;
 }
 
 .contact h1 {
   font-family: 'Lora', serif;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom:2%;
   color: white;
   text-align: center;
 }
 .contact-wrap {
   font-family: "Raleway",sans-serif;
-  padding-top: 20px;
+  padding-top: 2%;
   margin: 0 auto;
   display:flex;
   justify-content: flex-start;
@@ -21,11 +21,11 @@
 
 .contact-element, .contact-btn, .contact-text{
   width: 80%;
-  margin-bottom: 25px;
-  padding: 5px;
+  margin-bottom: 5%;
+  padding: 1%;
   font-family: "Raleway",sans-serif;
   font-size:1em;
-  
+  cursor: pointer;
 }
 
 .contact-element{
@@ -38,11 +38,10 @@
 .contact-btn {
   line-height: 1.5em;
   font-size: 1em;
-  background-color: black;
+  background-color:  #a67c52;
   color: white;
   border: 2px solid white;
-  transition: .3s;
-  cursor: pointer;
+  transition:all .3s;
 }
 
 .contact button:hover {
@@ -54,15 +53,72 @@
 }
 
 .contact-details .social {
-  padding: 10px 0;
+  padding: 2% 0;
   color: white;
   }
 
 .contact-details .social span {
-  line-height: 72px;
-  padding-left: 20px;
+  line-height: 4em;
+  padding-left: 4%;
   font-size: 1.2em;
 }
 .contact-details .fas{
   font-size:1.5em;
+}
+@media screen and (max-width:1200px){
+  .contact{
+    height: 35vh;
+  }
+}
+@media screen and (max-width:1200px) and (orientation:landscape){
+  .contact{
+    height: 45vw;
+  }
+}
+@media screen and (max-width:992px){
+  .contact{
+      
+    height: 45vh;
+  }
+}
+@media screen and (max-width:992px) and (orientation:landscape){
+  .contact{
+    margin-top: 15%;
+    height: 50vw;
+  }
+}
+@media screen and (max-width:767px) {
+  .contact {
+    padding:8%;
+    height: 55vh;
+  }
+  .contact-wrap {
+    flex-direction: column;
+    }
+  
+  .contact-element, .contact-btn, .contact-text{
+    font-size:.8em;
+    flex-basis: 80%;
+    
+    }
+    .contact-details{
+      width: 80%;
+    }
+  .contact-details .social span {
+    line-height: 2em;
+    font-size: 1em;
+  }
+  .contact-details .fas{
+    font-size:1em;
+  }
+}
+@media screen and (max-width:767px) and (orientation:landscape){
+  .contact{
+    height: 75vw;
+  }
+}
+@media screen and (max-width:360px){
+  .contact{
+    height: 60vh;
+  }
 }
