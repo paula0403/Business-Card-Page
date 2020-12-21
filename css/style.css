@@ -19,19 +19,41 @@ h1 {
   background-position: center;
   background-attachment: fixed;
 }
-
-.logo {
+.logo-pic .logo {
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: 15%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 25%;
-  height: 65%;
+  width: 50%;
+  height: 70%;
   background-image: url(img/logo.jpg);
 }
 
+@media screen and (max-width: 1200px) {
+  .logo-pic {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .logo-pic {
+    margin-top: 0;
+    height: 70vh;
+  }
+
+  .logo {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .logo-pic {
+    height: 50vw;
+  }
+}
 .menu {
   position: fixed;
   z-index: 1;
@@ -39,162 +61,367 @@ h1 {
   left: 0;
   height: 10vh;
   width: 100%;
-  background-color: #aadbdd;
 }
-
-.menu-list {
+.menu .hamburger, .menu .close {
+  position: fixed;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  cursor: pointer;
+}
+.menu .menu-list {
+  background-color: #aadbdd;
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: flex-end;
   list-style: none;
+  padding: 0 5%;
 }
-
-.menu-list > li {
-  cursor: pointer;
+.menu .menu-list li {
   color: #40464d;
-  text-decoration: none;
+  padding: 0 3%;
   text-transform: uppercase;
-  padding: 0 20px;
   font-family: "Raleway", sans-serif;
   font-size: 1.3em;
   transition: 0.2s;
 }
-
-.menu-list a {
+.menu .menu-list li a {
+  cursor: pointer;
+  width: 100%;
   color: #40464d;
+  text-decoration: none;
 }
-
-.menu-list > li:hover, .menu-list a:hover {
+.menu .menu-list li a:hover {
   color: #a67c52;
 }
-
-.menu-list li:nth-child(2) {
+.menu .menu-list li:nth-child(2) {
   flex-grow: 1;
 }
 
+@media screen and (max-width: 992px) {
+  .menu {
+    left: -35%;
+    width: 35%;
+    top: 10%;
+    height: 50vh;
+    transition: left 0.5s ease-in-out;
+  }
+
+  .menu-list {
+    margin-top: 40%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 8% 5%;
+  }
+
+  .menu-list li:nth-child(2) {
+    flex-grow: 0;
+  }
+
+  .menu-list > li {
+    font-size: 1.5em;
+  }
+
+  .hamburger {
+    opacity: 1;
+    left: 10%;
+    top: 10%;
+    font-size: 3em;
+    color: #000;
+  }
+
+  .close {
+    opacity: 0;
+    left: 10%;
+    top: 10%;
+    font-size: 3em;
+    color: #000;
+  }
+
+  .menu:hover > .hamburger {
+    opacity: 0;
+  }
+
+  .menu:hover > .close {
+    z-index: 99;
+    opacity: 1;
+  }
+
+  .menu:hover {
+    left: 0;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .menu {
+    height: 50vw;
+    width: 30%;
+    left: -30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    height: 60vh;
+    width: 50%;
+    left: -50%;
+  }
+
+  .menu-list > i {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .menu {
+    height: 50vw;
+    width: 35%;
+    left: -35%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .menu {
+    width: 55%;
+    left: -55%;
+  }
+}
 .about {
   height: 35vh;
-  margin-top: 40px;
+  margin-top: 5%;
 }
-
 .about h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
-.about-content {
-  margin: 30px;
+.about .about-content {
+  margin: 3%;
 }
-
-.about-content p {
+.about .about-content p {
   font-family: "Raleway", sans-serif;
   text-align: center;
   line-height: 1.5em;
   font-size: 1em;
 }
-
-.projects .container {
-  margin: 20px auto;
+.about .about-content .tech {
+  margin: 3% auto 0;
+  display: block;
 }
 
-.projects .container h1 {
+@media screen and (max-width: 1200px) {
+  .about {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .about {
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about {
+    height: 30vh;
+  }
+
+  .about-content p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .about {
+    height: 35vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about {
+    height: 55vh;
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .about {
+    margin-top: 10%;
+    height: 45vw;
+  }
+}
+@media screen and (max-width: 360px) {
+  .about {
+    height: 80vh;
+  }
+}
+.container {
+  margin: 15% auto;
+}
+.container h1 {
   text-align: center;
   text-transform: uppercase;
 }
 
-.projects .grid {
-  margin-top: 40px;
+.box-flow {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(2 1fr);
   grid-template-rows: repeat(5 1fr);
-  grid-gap: 40px;
-  padding: 0 40px;
+  grid-gap: 5%;
+  padding: 0 5%;
 }
-
-.grid-item {
+.box-flow .item {
   display: grid;
   overflow: hidden;
 }
-
-.grid-item img {
+.box-flow .item img {
   width: 100%;
   cursor: zoom-in;
   transition: 0.4s;
 }
-
-.grid-item img:hover {
+.box-flow .item img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
-
-.grid-item p {
+.box-flow .item p {
   align-self: center;
   font-family: "Raleway", sans-serif;
   text-align: center;
   line-height: 1.5em;
 }
-
-.grid-item1 {
+.box-flow .item p .more {
+  margin-top: 2%;
+  padding: 2% 4%;
+  color: #40464d;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px 5px #40464d;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.box-flow .item p .more:hover {
+  background-color: #aadbdd;
+}
+.box-flow .item1 {
   grid-column: 1/2;
 }
-
-.grid-item2 {
+.box-flow .item2 {
   grid-column: 2/3;
 }
-
-.grid-item3 {
+.box-flow .item3 {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-
-.grid-item4 {
+.box-flow .item4 {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-
-.grid-item5 {
+.box-flow .item5 {
   grid-column: 1/2;
   grid-row: 3/4;
 }
-
-.grid-item6 {
+.box-flow .item6 {
   grid-column: 2/3;
   grid-row: 3/4;
 }
-
-.grid-item7 {
+.box-flow .item7 {
   grid-column: 1/2;
   grid-row: 4/5;
 }
-
-.grid-item8 {
+.box-flow .item8 {
   grid-column: 2/3;
   grid-row: 4/5;
 }
-
-.grid-item9 {
+.box-flow .item9 {
   grid-column: 1/2;
   grid-row: 5/6;
 }
-
-.grid-item10 {
+.box-flow .item10 {
   grid-column: 2/3;
   grid-row: 5/6;
 }
 
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .item p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .item p {
+    font-size: 0.6em;
+  }
+
+  .item .more {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projects .container {
+    margin: 20% auto 0 auto;
+  }
+
+  .projects .box-flow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    padding: 5% 0;
+  }
+
+  .item .more {
+    box-shadow: 5px 5px 5px 5px #40464d;
+  }
+
+  .item1 {
+    order: 1;
+  }
+
+  .item2 {
+    order: 2;
+  }
+
+  .item3 {
+    order: 4;
+  }
+
+  .item4 {
+    order: 3;
+  }
+
+  .item5 {
+    order: 5;
+  }
+
+  .item6 {
+    order: 6;
+  }
+
+  .item7 {
+    order: 8;
+  }
+
+  .item8 {
+    order: 7;
+  }
+
+  .item9 {
+    order: 9;
+  }
+
+  .item10 {
+    order: 10;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .item img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .baner-item {
-  margin-top: 90px;
+  margin-top: 40%;
   height: 90vh;
   position: relative;
 }
-
 .baner-item img {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
 }
-
 .baner-item img:nth-child(2) {
   animation: slider 5s linear infinite;
 }
@@ -206,92 +433,208 @@ h1 {
   50% {
     opacity: 0;
   }
-  50.01% {
+  55% {
+    opacity: 1;
+  }
+  95% {
     opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .baner-item {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .baner-item {
+    height: 60vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .baner-item {
+    margin-top: 50%;
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .baner-item {
+    margin-top: 45%;
+    height: 60vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .baner-item {
+    margin-top: 15%;
+    height: 40vh;
+  }
+
+  .baner-item img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .baner-item {
+    margin-top: 10%;
+    height: 55vw;
+  }
+
+  .baner-item img {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .baner-item {
+    height: 45vh;
   }
 }
 .contact {
-  background-color: #000;
-  padding: 40px;
-  height: 70vh;
+  background-color: #40464d;
+  padding: 5%;
+  height: 80vh;
 }
-
 .contact h1 {
   font-family: "Lora", serif;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 2%;
   color: white;
   text-align: center;
 }
-
-.contact-wrap {
+.contact .contact-wrap {
   font-family: "Raleway", sans-serif;
-  padding-top: 20px;
+  padding-top: 2%;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
 }
-
-.contact-element, .contact-btn, .contact-text {
+.contact .contact-wrap .form-wrap .contact-element, .contact .contact-wrap .form-wrap .contact-btn, .contact .contact-wrap .form-wrap .contact-text {
   width: 80%;
-  margin-bottom: 25px;
-  padding: 5px;
+  margin-bottom: 5%;
+  padding: 1%;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
-}
-
-.contact-element {
-  height: 13%;
-}
-
-.contact-text {
-  height: 30%;
-}
-
-.contact-btn {
-  line-height: 1.5em;
-  font-size: 1em;
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-  transition: 0.3s;
   cursor: pointer;
 }
-
-.contact button:hover {
+.contact .contact-wrap .form-wrap .contact-element {
+  height: 13%;
+}
+.contact .contact-wrap .form-wrap .contact-text {
+  height: 30%;
+}
+.contact .contact-wrap .form-wrap .contact-btn {
+  line-height: 1.5em;
+  font-size: 1em;
+  background-color: #a67c52;
+  color: white;
+  border: 2px solid white;
+  transition: all 0.3s;
+}
+.contact .contact-wrap .form-wrap .contact button:hover {
   color: black;
   background-color: #fff;
 }
-
-.contact-details {
+.contact .contact-wrap .contact-details {
   flex-basis: 50%;
 }
-
-.contact-details .social {
-  padding: 10px 0;
+.contact .contact-wrap .contact-details .social {
+  padding: 2% 0;
   color: white;
 }
-
-.contact-details .social span {
-  line-height: 72px;
-  padding-left: 20px;
+.contact .contact-wrap .contact-details .social span {
+  line-height: 4em;
+  padding-left: 4%;
   font-size: 1.2em;
 }
-
-.contact-details .fas {
+.contact .contact-wrap .contact-details .fas {
   font-size: 1.5em;
 }
 
+@media screen and (max-width: 1200px) {
+  .contact {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .contact {
+    height: 45vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .contact {
+    margin-top: 15%;
+    height: 50vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 8%;
+    height: 55vh;
+  }
+
+  .contact-wrap {
+    flex-direction: column;
+  }
+
+  .contact-element, .contact-btn, .contact-text {
+    font-size: 0.8em;
+    flex-basis: 80%;
+  }
+
+  .contact-details {
+    width: 80%;
+  }
+
+  .contact-details .social span {
+    line-height: 2em;
+    font-size: 1em;
+  }
+
+  .contact-details .fas {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .contact {
+    height: 75vw;
+  }
+}
+@media screen and (max-width: 360px) {
+  .contact {
+    height: 60vh;
+  }
+}
 .end {
   background-color: #aadbdd;
   text-align: center;
-  padding: 20px;
   font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  line-height: 10vh;
   height: 10vh;
+}
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .end {
+    height: 10vw;
+    line-height: 10vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .end {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .end {
+    height: 10vw;
+    line-height: 10vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

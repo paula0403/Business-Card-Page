@@ -1,24 +1,25 @@
 .about{
   height: 35vh;
   margin-top:5%;
-}
-.about h1{
-  text-align: center;
-  text-transform: uppercase;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
   }
-.about-content{
-  margin: 3% ;
+  .about-content{
+    margin: 3% ;
+    p{
+      font-family:"Raleway",sans-serif;
+      text-align:center;
+      line-height: 1.5em;
+      font-size:1em;
+    }
+    .tech{
+      margin:3% auto 0;
+      display:block;
+    }
+  }
 }
-.about-content p{
-  font-family:"Raleway",sans-serif;
-  text-align:center;
-  line-height: 1.5em;
-  font-size:1em;
-}
-.tech{
-  margin:3% auto 0;
-  display:block;
-}
+
 @media screen and (max-width:1200px){
   
   .about{

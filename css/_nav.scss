@@ -1,9 +1,4 @@
-.hamburger, .close{
-  position:fixed;
-  opacity:0;
-  transition:opacity 1s ease-in-out;
-  cursor:pointer;
-}
+
 .menu{
   position:fixed;
   z-index:1;
@@ -11,43 +6,43 @@
   left:0;
   height: 10vh;
   width: 100%;
-  
-  
-}
-.menu-list{
-  background-color:rgb(170, 219, 221);
-  display:flex;
-  height: 100%;
-  align-items: center;
-  justify-content: flex-end;
-  list-style: none;
-  padding:0 5%;
-   
+  .hamburger, .close{
+    position:fixed;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+    cursor:pointer;
   }
-.menu-list>li{
-  
-  color:#40464d;
-  padding:0 3%;
-  text-transform: uppercase;
-  font-family: "Raleway",sans-serif;
-  font-size: 1.3em;
-  transition:.2s;
+  .menu-list{
+    background-color:rgb(170, 219, 221);
+    display:flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding:0 5%;
+    li{
+      color:#40464d;
+      padding:0 3%;
+      text-transform: uppercase;
+      font-family: "Raleway",sans-serif;
+      font-size: 1.3em;
+      transition:.2s;
+      a{
+        cursor:pointer;
+        width:100%;
+        color:#40464d;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #a67c52;
+      }
+    }
+    li:nth-child(2){
+      flex-grow:1;
+    }
   }
-.menu-list li:nth-child(2){
-  flex-grow:1;
 }
 
-.menu-list a{
-    
-    cursor:pointer;
-    width:100%;
-    color:#40464d;
-    text-decoration: none;
-  }
-.menu-list a:hover{
-    
-    color: #a67c52;
-  }
   @media screen and (max-width:992px){
     .menu{
       left:-35%;
