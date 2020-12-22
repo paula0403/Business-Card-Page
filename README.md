@@ -17,4 +17,4 @@ The design uses:
 -Form 
 -Responsive Web Design.
 
-https://paula0403.github.io/Business-Card-Page/
+https://paula0403.github.io/CodersCamp2020.Project.HTML-CSS.Business-Card-Page/
