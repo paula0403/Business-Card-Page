@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*nav*/
 .hamburger, .close{
   position:fixed;
   display:none;
@@ -16,8 +17,6 @@
   left:0;
   height: 10vh;
   width: 100%;
-  
-  
 }
 .menu-list{
   background-color:rgb(170, 219, 221);
@@ -27,32 +26,29 @@
   justify-content: flex-end;
   list-style: none;
   padding:0 25px;
-   
-  }
+}
 .menu-list>li{
-  
   color:#40464d;
   padding:0 25px;
   text-transform: uppercase;
   font-family: "Raleway",sans-serif;
   font-size: 1.3em;
   transition:.2s;
-  }
+}
 .menu-list li:nth-child(2){
   flex-grow: 1;
 }
-
 .menu-list a{
-    
-    cursor:pointer;
-    width:100%;
-    color:#40464d;
-    text-decoration: none;
-  }
+  cursor:pointer;
+  width:100%;
+  color:#40464d;
+  text-decoration: none;
+}
 .menu-list a:hover{
-    
-    color: #a67c52;
-  }
+  color: #a67c52;
+}
+
+/*header*/
 .logo-pic{
   position:relative;
   margin-top:10vh;
@@ -75,6 +71,7 @@
   background-image: url(img/unknown.png);
 }
 
+/*section about*/
 .about{
   height: 35vh;
   margin-top:5%;
@@ -84,9 +81,8 @@
   font-family: "Raleway",sans-serif;
   text-align: center;
   text-transform: uppercase;
-  }
+}
 .about-content{
-
   margin: 3% ;
 }
 .about-content p{
@@ -100,6 +96,7 @@
   display:block;
 }
 
+/*section projects*/
 .projects-container{
   margin:15% auto 10%;
 }
@@ -108,11 +105,10 @@
   font-size:2em;
   text-align: center;
   text-transform: uppercase;
-   }
+}
 .projects-box{
   display:flex;
   flex-direction: column;
-  
 }
 .project{
   display:flex;
@@ -120,7 +116,6 @@
   padding:40px;
   border-bottom: 1px solid #40464d;
 }
-
 .project .img{
   flex-basis: 50%;
   overflow: hidden;
@@ -129,7 +124,6 @@
 .project img{
   width: 100%;
   transition: .4s;
-  
 }
 .project img:hover{
   transform: scale(1.2);
@@ -153,7 +147,6 @@
   display: flex;
   justify-content: space-around;
 }
-
 .project .text p{
 font-family:'Merriweather', serif;;
 line-height: 1.5em;  
@@ -173,6 +166,8 @@ line-height: 1.5em;
 .order-now:hover{
   background-color:rgb(170, 219, 221);
 }
+
+/*section baner*/
 .baner-item{
   height: 80vh;
   position: relative;
@@ -195,7 +190,7 @@ line-height: 1.5em;
     opacity:0;
   }    
   55%{
-      opacity:1;
+    opacity:1;
   }
   95%{
     opacity:1;
@@ -205,14 +200,13 @@ line-height: 1.5em;
   }
 }
 
-
+/*section contact*/
 .contact {
   margin-top:10%;
   background-color: #40464d;
   padding: 40px;
   height: 80vh;
 }
-
 .contact h2 {
   font-size: 2em;
   font-family: "Raleway",sans-serif;
@@ -231,21 +225,16 @@ line-height: 1.5em;
 .form-wrap form{
   height: 80%;
 }
-
 .contact-element, .contact-btn, .contact-text{
   width: 80%;
   margin-bottom: 5%;
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   cursor: pointer;
-  
-  
 }
-
 .contact-element{
   height: 10%;
 }
-
 .contact-text {
   height: 30%;
 }
@@ -258,7 +247,6 @@ line-height: 1.5em;
   border: 2px solid white;
   transition:all .3s;
 }
-
 .contact button:hover {
   color: #000;
   background-color: #fff;
@@ -266,13 +254,11 @@ line-height: 1.5em;
 .contact-details{
   flex-basis:50%;
 }
-
-.contact-details .social {
+.contact-details .social{
   padding: 20px 0;
   color: #fff;
-  }
-
-.contact-details .social a {
+}
+.contact-details .social a{
   text-decoration: none;
   color:#fff;
   line-height: 4em;
@@ -283,8 +269,8 @@ line-height: 1.5em;
   font-size:1.5em;  
 }
 
+/*footer*/
 .end{
-  
   background-color:rgb(170, 219, 221);
   text-align: center;
   font-family: 'Merriweather', serif;;
@@ -292,6 +278,20 @@ line-height: 1.5em;
   line-height: 10vh;
   height: 10vh;
 }
+
+@media screen and (max-width:1366px) and (orientation:landscape){
+  .about{
+    height: 20vw;
+  }
+  .baner-item{
+    height: 40vw;
+  }
+  .contact{
+    height: 40vw;
+  }
+}
+
+
 @media screen and (max-width:1200px){
   .logo-pic{
     height: 60vh;
@@ -303,7 +303,6 @@ line-height: 1.5em;
     height: 40vh;
   }
   .contact{
-    
     height: 35vh;
   }
 }
@@ -337,63 +336,59 @@ line-height: 1.5em;
   .menu-list li:nth-child(2){
     flex-grow: 0;
     }
-    .menu-list>li{
-      font-size:1.5em;
-    }
+  .menu-list>li{
+    font-size:1.5em;
+  }
     
-    .hamburger, .close{
-      left:10%;
-      top:10%;
-      font-size:3em;
-      color:#000;
-}
-    .hamburger{
-      display:block;  
-    }
-    .menu:hover>.hamburger{
-      display:none;
-    }
-    .menu:hover>.close{
-      z-index:99;
-      display:block;
-    
-    }
-    .menu:hover{
-      left:0;
-    }
-    
-      .logo-pic{
-        margin-top: 0;
-        height: 70vh;
-      }
-      .logo{
-        left:50%;
-        top:50%;
-        transform:translate(-50%,-50%);
-        background-size: contain;
-      }
-      .about{
-        height: 35vh;
-      }
-      .project .text h3{
-        line-height: 1.5em;
-      }
-      .project .text p{
-        line-height: 1.2 em;
-        font-size: 1em;
-      }
-      .baner-item{
-        margin-top: 15%;
-        height: 60vh;
-      }
-      .contact{
-      
-        height: 40vh;
-      }
-      .contact-element, .contact-btn, .contact-text{
-        font-size: 1em;
-      }
-    
+  .hamburger, .close{
+    left:10%;
+    top:10%;
+    font-size:3em;
+    color:#000;
+  }
+  .hamburger{
+    display:block;  
+  }
+  .menu:hover>.hamburger{
+    display:none;
+  }
+  .menu:hover>.close{
+    z-index:99;
+    display:block;
+  }
+  .menu:hover{
+    left:0;
+  }
+  .logo-pic{
+    margin-top: 0;
+    height: 70vh;
+  }
+  .logo{
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background-size: contain;
+  }
+  .about{
+    height: 35vh;
+  }
+  .project .text h3{
+    line-height: 1.5em;
+  }
+  .project .text p{
+    line-height: 1.2 em;
+    font-size: 1em;
+  }
+  .baner-item{
+    margin-top: 15%;
+    height: 60vh;
+  }
+  .contact{
+    height: 40vh;
+  }
+  .contact-element, .contact-btn, .contact-text{
+    font-size: 1em;
+  }
 }
 @media screen and (max-width:992px) and (orientation:landscape){
   .menu{
@@ -442,7 +437,6 @@ line-height: 1.5em;
   .projects-container h2{
     font-size:1.5em;
   }
-  
   .project{
     flex-direction: column;
     padding:30px;
@@ -457,24 +451,19 @@ line-height: 1.5em;
   .project .text h3{
     text-align: center;
   }
-  
   .project .details{
     padding-top: 10px;
     flex-grow: 1;
     flex-direction:column;
-  
   }
   .project .details ul{
     list-style: none;
   }
-  
   .order-now {
     min-height: 50%;
     padding:20px 25px;
     width: 40%;
     margin:5% auto 0;
-    
-    
   }
   .baner-item{
     margin-top: 20% ;
@@ -483,15 +472,12 @@ line-height: 1.5em;
   .baner-item img{
     width:85%;
   }
-  
   .contact {
     height: 70vh;
   }
-  
   .contact h2 {
     font-size: 1.5em;
     padding-bottom:30px;
-    
   }
   .contact-wrap {
     flex-direction: column;
@@ -502,7 +488,6 @@ line-height: 1.5em;
   .form-wrap form{
     height: 100%;
   }
-  
   .contact-element{
     height: 15%;
   }
@@ -513,73 +498,65 @@ line-height: 1.5em;
     flex-basis:30%;
     margin-bottom: 10%;
   }
-  
   .contact-details .social {
     padding: 0;
-    }
-  
+  }
   .contact-details .fas{
     font-size:1.2em;  
   }
   .end{
     font-size:1.2em;
   }   
-  }  
-  @media screen and (max-width:767px) and (orientation:landscape){
-    .menu{
-      height: 50vw;
-      width: 35%;
-      left:-35%;
-    }
-    .about{
-      margin-top: 10%;
-      height: 60vw;
-    }
-    .projects-box{
-      margin-top: 3%;
-    }
-    .order-now{
-      width: 25%;
-      padding-bottom: 30px;
-    }
-    
-    .baner-item{
-      margin-top: 10%;
-      height: 65vw;
-    }
-    
-    .contact{
-      height: 85vw;
-    }
-    .contact-details{
-      margin-top:5%;
-    
-    }
-    
-    .end{
-      height: 10vw;
-      line-height: 10vw;
-    }
-
-  }  
-  @media screen and (max-width:360px){
-    .menu{
-      width: 55%;
-      left:-55%;
-    }
-    .about{
-      height: 100vh;
-    }
-    
-    .order-now{
-      width: 50%;
-      height: 40%;
-      padding:10px;
-    }
-    .baner-item{
-      height: 45vh;
-    }
-    .contact{
-      height: 70vh;
-    }
+}  
+@media screen and (max-width:767px) and (orientation:landscape){
+  .menu{
+    height: 50vw;
+    width: 35%;
+    left:-35%;
+  }
+  .about{
+    margin-top: 10%;
+    height: 60vw;
+  }
+  .projects-box{
+    margin-top: 3%;
+  }
+  .order-now{
+    width: 25%;
+    padding-bottom: 30px;
+  }
+  .baner-item{
+    margin-top: 10%;
+    height: 65vw;
+  }
+  .contact{
+    height: 85vw;
+  }
+  .contact-details{
+    margin-top:5%;
+  }
+  .end{
+    height: 10vw;
+    line-height: 10vw;
+  }
+}  
+@media screen and (max-width:360px){
+  .menu{
+    width: 55%;
+    left:-55%;
+  }
+  .about{
+    height: 100vh;
+  }
+  .order-now{
+    width: 50%;
+    height: 40%;
+    padding:10px;
+  }
+  .baner-item{
+    height: 45vh;
+  }
+  .contact{
+    height: 70vh;
+  }
 }

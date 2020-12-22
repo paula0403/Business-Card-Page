@@ -3,15 +3,12 @@
   padding:0;
   box-sizing: border-box;
 }
-h1{
-  font-family: 'Lora', serif;
-  font-size: 2rem;
-}
+
 .logo-pic{
   position:relative;
   margin-top:10vh;
   height: 80vh;
-  background-image: url(img/angora-440165_1280.jpg);
+  background-image: url(../img/angora-440165_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -26,7 +23,7 @@ h1{
     background-repeat:no-repeat;
     width: 50%;
     height: 70%;
-    background-image: url(img/logo.jpg);
+    background-image: url(../img/unknown.png);
   }
 } 
 @media screen and (max-width:1200px){
@@ -38,16 +35,16 @@ h1{
   .logo-pic{
     margin-top: 0;
     height: 70vh;
-  }
-  .logo{
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    background-size: contain;
-  }
+  
+    .logo{
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      background-size: contain;
+    }
+  }  
 }
 @media screen and (max-width:992px) and (orientation:landscape){
-  
   .logo-pic{
     height: 50vw;
   }

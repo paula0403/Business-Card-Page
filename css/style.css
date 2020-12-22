@@ -4,16 +4,11 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Lora", serif;
-  font-size: 2rem;
-}
-
 .logo-pic {
   position: relative;
   margin-top: 10vh;
   height: 80vh;
-  background-image: url(img/angora-440165_1280.jpg);
+  background-image: url(../img/angora-440165_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,7 +23,7 @@ h1 {
   background-repeat: no-repeat;
   width: 50%;
   height: 70%;
-  background-image: url(img/logo.jpg);
+  background-image: url(../img/unknown.png);
 }
 
 @media screen and (max-width: 1200px) {
@@ -41,8 +36,7 @@ h1 {
     margin-top: 0;
     height: 70vh;
   }
-
-  .logo {
+  .logo-pic .logo {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -64,8 +58,7 @@ h1 {
 }
 .menu .hamburger, .menu .close {
   position: fixed;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  display: none;
   cursor: pointer;
 }
 .menu .menu-list {
@@ -75,11 +68,11 @@ h1 {
   align-items: center;
   justify-content: flex-end;
   list-style: none;
-  padding: 0 5%;
+  padding: 0 25px;
 }
 .menu .menu-list li {
   color: #40464d;
-  padding: 0 3%;
+  padding: 0 25px;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   font-size: 1.3em;
@@ -106,46 +99,36 @@ h1 {
     height: 50vh;
     transition: left 0.5s ease-in-out;
   }
-
-  .menu-list {
+  .menu .hamburger, .menu .close {
+    left: 10%;
+    top: 10%;
+    font-size: 3em;
+    color: #000;
+  }
+  .menu .hamburger {
+    display: block;
+  }
+  .menu .menu-list {
     margin-top: 40%;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     padding: 8% 5%;
   }
-
-  .menu-list li:nth-child(2) {
+  .menu .menu-list li {
+    font-size: 1.5em;
+  }
+  .menu .menu-list li:nth-child(2) {
     flex-grow: 0;
   }
 
-  .menu-list > li {
-    font-size: 1.5em;
-  }
-
-  .hamburger {
-    opacity: 1;
-    left: 10%;
-    top: 10%;
-    font-size: 3em;
-    color: #000;
-  }
-
-  .close {
-    opacity: 0;
-    left: 10%;
-    top: 10%;
-    font-size: 3em;
-    color: #000;
-  }
-
   .menu:hover > .hamburger {
-    opacity: 0;
+    display: none;
   }
 
   .menu:hover > .close {
     z-index: 99;
-    opacity: 1;
+    display: block;
   }
 
   .menu:hover {
@@ -165,8 +148,7 @@ h1 {
     width: 50%;
     left: -50%;
   }
-
-  .menu-list > i {
+  .menu .menu-list > i {
     font-size: 1em;
   }
 }
@@ -188,6 +170,8 @@ h1 {
   margin-top: 5%;
 }
 .about h1 {
+  font-size: 2em;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   text-transform: uppercase;
 }
@@ -205,215 +189,189 @@ h1 {
   display: block;
 }
 
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  .about {
+    height: 20vw;
+  }
+}
 @media screen and (max-width: 1200px) {
   .about {
-    height: 20vh;
+    height: 25vh;
   }
 }
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   .about {
-    height: 25vw;
+    height: 30vw;
   }
 }
 @media screen and (max-width: 992px) {
   .about {
-    height: 30vh;
-  }
-
-  .about-content p {
-    font-size: 0.8em;
+    height: 35vh;
   }
 }
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .about {
-    height: 35vw;
+    height: 45vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about {
-    height: 55vh;
+    height: 85vh;
     margin-top: 20%;
+  }
+  .about h1 {
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .about {
     margin-top: 10%;
-    height: 45vw;
+    height: 60vw;
   }
 }
 @media screen and (max-width: 360px) {
   .about {
-    height: 80vh;
+    height: 100vh;
   }
 }
-.container {
-  margin: 15% auto;
+.projects-container {
+  margin: 15% auto 10%;
 }
-.container h1 {
+.projects-container h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
   text-align: center;
   text-transform: uppercase;
 }
-
-.box-flow {
-  margin-top: 5%;
-  display: grid;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: repeat(5 1fr);
-  grid-gap: 5%;
-  padding: 0 5%;
+.projects-container .projects-box {
+  display: flex;
+  flex-direction: column;
 }
-.box-flow .item {
-  display: grid;
+.projects-container .projects-box .project {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  border-bottom: 1px solid #40464d;
+}
+.projects-container .projects-box .project .img {
+  flex-basis: 50%;
   overflow: hidden;
-}
-.box-flow .item img {
-  width: 100%;
   cursor: zoom-in;
+}
+.projects-container .projects-box .project .img img {
+  width: 100%;
   transition: 0.4s;
 }
-.box-flow .item img:hover {
+.projects-container .projects-box .project .img img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
-.box-flow .item p {
+.projects-container .projects-box .project .text {
   align-self: center;
+  flex-basis: 40%;
+  padding-left: 30px;
+  flex-grow: 1;
+}
+.projects-container .projects-box .project .text h3 {
+  line-height: 3em;
+  padding-bottom: 15px;
   font-family: "Raleway", sans-serif;
-  text-align: center;
+}
+.projects-container .projects-box .project .text p {
+  font-family: "Merriweather", serif;
   line-height: 1.5em;
 }
-.box-flow .item p .more {
-  margin-top: 2%;
-  padding: 2% 4%;
-  color: #40464d;
+.projects-container .projects-box .project .details {
+  font-family: "Merriweather", serif;
+  padding-top: 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
+.projects-container .projects-box .project .details .order-now {
+  max-height: 60%;
+  padding: 0 20px;
   background-color: transparent;
-  border-radius: 50%;
   box-shadow: 5px 5px 15px 5px #40464d;
   cursor: pointer;
   transition: 0.2s;
 }
-.box-flow .item p .more:hover {
+.projects-container .projects-box .project .details .order-now a {
+  text-decoration: none;
+  color: #40464d;
+}
+.projects-container .projects-box .project .details .order-now:hover {
   background-color: #aadbdd;
 }
-.box-flow .item1 {
-  grid-column: 1/2;
-}
-.box-flow .item2 {
-  grid-column: 2/3;
-}
-.box-flow .item3 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.box-flow .item4 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.box-flow .item5 {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.box-flow .item6 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.box-flow .item7 {
-  grid-column: 1/2;
-  grid-row: 4/5;
-}
-.box-flow .item8 {
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-.box-flow .item9 {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-.box-flow .item10 {
-  grid-column: 2/3;
-  grid-row: 5/6;
-}
 
-@media screen and (max-width: 1200px) and (orientation: landscape) {
-  .item p {
-    font-size: 0.8em;
-  }
-}
 @media screen and (max-width: 992px) {
-  .item p {
-    font-size: 0.6em;
+  .project .text h3 {
+    line-height: 1.5em;
   }
 
-  .item .more {
-    font-size: 0.8em;
+  .project .text p {
+    line-height: 1.2 em;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .order-now {
+    margin-top: 2%;
   }
 }
 @media screen and (max-width: 767px) {
-  .projects .container {
-    margin: 20% auto 0 auto;
+  .projects-container h2 {
+    font-size: 1.5em;
   }
 
-  .projects .box-flow {
-    display: flex;
+  .project {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .project .text {
+    align-self: center;
+    flex-basis: 50%;
+    padding-top: 20px;
+    padding-left: 0px;
+    flex-grow: 0;
+  }
+  .project .text h3 {
+    text-align: center;
+  }
+  .project .details {
+    padding-top: 10px;
+    flex-grow: 1;
     flex-direction: column;
   }
-
-  .item {
-    padding: 5% 0;
+  .project .details ul {
+    list-style: none;
   }
-
-  .item .more {
-    box-shadow: 5px 5px 5px 5px #40464d;
-  }
-
-  .item1 {
-    order: 1;
-  }
-
-  .item2 {
-    order: 2;
-  }
-
-  .item3 {
-    order: 4;
-  }
-
-  .item4 {
-    order: 3;
-  }
-
-  .item5 {
-    order: 5;
-  }
-
-  .item6 {
-    order: 6;
-  }
-
-  .item7 {
-    order: 8;
-  }
-
-  .item8 {
-    order: 7;
-  }
-
-  .item9 {
-    order: 9;
-  }
-
-  .item10 {
-    order: 10;
+  .project .details .order-now {
+    min-height: 50%;
+    padding: 20px 25px;
+    width: 40%;
+    margin: 5% auto 0;
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
-  .item img {
-    width: 80%;
-    margin: 0 auto;
+  .projects-box {
+    margin-top: 3%;
+  }
+
+  .order-now {
+    width: 25%;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .order-now {
+    width: 50%;
+    height: 40%;
+    padding: 10px;
   }
 }
 .baner-item {
-  margin-top: 40%;
-  height: 90vh;
+  height: 80vh;
   position: relative;
 }
 .baner-item img {
@@ -443,9 +401,14 @@ h1 {
     opacity: 0;
   }
 }
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  .baner-item {
+    height: 40vw;
+  }
+}
 @media screen and (max-width: 1200px) {
   .baner-item {
-    height: 45vh;
+    height: 40vh;
   }
 }
 @media screen and (max-width: 1200px) and (orientation: landscape) {
@@ -455,34 +418,29 @@ h1 {
 }
 @media screen and (max-width: 992px) {
   .baner-item {
-    margin-top: 50%;
+    margin-top: 15%;
     height: 60vh;
   }
 }
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .baner-item {
-    margin-top: 45%;
+    margin-top: 15%;
     height: 60vw;
   }
 }
 @media screen and (max-width: 767px) {
   .baner-item {
-    margin-top: 15%;
+    margin-top: 20%;
     height: 40vh;
   }
-
   .baner-item img {
-    width: 80%;
+    width: 85%;
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .baner-item {
     margin-top: 10%;
-    height: 55vw;
-  }
-
-  .baner-item img {
-    width: 75%;
+    height: 65vw;
   }
 }
 @media screen and (max-width: 360px) {
@@ -491,66 +449,79 @@ h1 {
   }
 }
 .contact {
+  margin-top: 10%;
   background-color: #40464d;
-  padding: 5%;
+  padding: 40px;
   height: 80vh;
 }
-.contact h1 {
-  font-family: "Lora", serif;
+.contact h2 {
+  font-size: 2em;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 2%;
-  color: white;
+  padding-bottom: 40px;
+  color: #fff;
   text-align: center;
 }
 .contact .contact-wrap {
-  font-family: "Raleway", sans-serif;
-  padding-top: 2%;
+  font-family: "Merriweather", serif;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  height: 100%;
 }
-.contact .contact-wrap .form-wrap .contact-element, .contact .contact-wrap .form-wrap .contact-btn, .contact .contact-wrap .form-wrap .contact-text {
+.contact .contact-wrap form {
+  height: 80%;
+}
+.contact .contact-wrap form .contact-element, .contact .contact-wrap form .contact-btn, .contact .contact-wrap form .contact-text {
   width: 80%;
   margin-bottom: 5%;
-  padding: 1%;
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
   cursor: pointer;
 }
-.contact .contact-wrap .form-wrap .contact-element {
-  height: 13%;
+.contact .contact-wrap form .contact-element {
+  height: 10%;
 }
-.contact .contact-wrap .form-wrap .contact-text {
+.contact .contact-wrap form .contact-text {
   height: 30%;
 }
-.contact .contact-wrap .form-wrap .contact-btn {
+.contact .contact-wrap form .contact-btn {
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   background-color: #a67c52;
   color: white;
   border: 2px solid white;
   transition: all 0.3s;
 }
-.contact .contact-wrap .form-wrap .contact button:hover {
-  color: black;
+.contact .contact-wrap form .contact button:hover {
+  color: #000;
   background-color: #fff;
 }
-.contact .contact-wrap .contact-details {
+
+.contact-details {
   flex-basis: 50%;
 }
-.contact .contact-wrap .contact-details .social {
-  padding: 2% 0;
-  color: white;
+.contact-details .social {
+  padding: 20px 0;
+  color: #fff;
 }
-.contact .contact-wrap .contact-details .social span {
+.contact-details .social a {
+  text-decoration: none;
+  color: #fff;
   line-height: 4em;
-  padding-left: 4%;
+  padding-left: 15px;
   font-size: 1.2em;
 }
-.contact .contact-wrap .contact-details .fas {
+.contact-details .social .fas {
   font-size: 1.5em;
 }
 
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  .contact {
+    height: 40vw;
+  }
+}
 @media screen and (max-width: 1200px) {
   .contact {
     height: 35vh;
@@ -565,6 +536,9 @@ h1 {
   .contact {
     height: 45vh;
   }
+  .contact .contact-element, .contact .contact-btn, .contact .contact-text {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .contact {
@@ -574,46 +548,55 @@ h1 {
 }
 @media screen and (max-width: 767px) {
   .contact {
-    padding: 8%;
-    height: 55vh;
+    height: 70vh;
   }
-
-  .contact-wrap {
+  .contact h2 {
+    font-size: 1.5em;
+    padding-bottom: 30px;
+  }
+  .contact .contact-wrap {
     flex-direction: column;
   }
-
-  .contact-element, .contact-btn, .contact-text {
-    font-size: 0.8em;
-    flex-basis: 80%;
+  .contact .contact-wrap .form-wrap {
+    flex-basis: 60%;
   }
-
-  .contact-details {
-    width: 80%;
+  .contact .contact-wrap .form-wrap form {
+    height: 100%;
   }
-
-  .contact-details .social span {
-    line-height: 2em;
-    font-size: 1em;
+  .contact .contact-wrap .form-wrap form .contact-element {
+    height: 15%;
   }
-
-  .contact-details .fas {
-    font-size: 1em;
+  .contact .contact-wrap .form-wrap form .contact-text {
+    height: 30%;
+  }
+  .contact .contact-wrap .contact-details {
+    flex-basis: 30%;
+    margin-bottom: 10%;
+  }
+  .contact .contact-wrap .contact-details .social {
+    padding: 0;
+  }
+  .contact .contact-wrap .contact-details .social .fas {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .contact {
-    height: 75vw;
+    height: 85vw;
+  }
+  .contact .contact-details {
+    margin-top: 5%;
   }
 }
 @media screen and (max-width: 360px) {
   .contact {
-    height: 60vh;
+    height: 70vh;
   }
 }
 .end {
   background-color: #aadbdd;
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 1.3em;
   line-height: 10vh;
   height: 10vh;

@@ -1,63 +1,75 @@
 .contact {
+  margin-top:10%;
   background-color: #40464d;
-  padding: 5%;
+  padding: 40px;
   height: 80vh;
-  h1 {
-    font-family: 'Lora', serif;
+  h2 {
+    font-size: 2em;
+    font-family: "Raleway",sans-serif;
     text-transform: uppercase;
-    margin-bottom:2%;
-    color: white;
+    padding-bottom:40px;
+    color: #fff;
     text-align: center;
   }
   .contact-wrap {
-    font-family: "Raleway",sans-serif;
-    padding-top: 2%;
+    font-family: 'Merriweather', serif;
     margin: 0 auto;
     display:flex;
-    justify-content: flex-start;
-    .form-wrap{
+    justify-content: center;
+    height: 100%;
+    form{
+      height: 80%;
       .contact-element, .contact-btn, .contact-text{
         width: 80%;
         margin-bottom: 5%;
-        padding: 1%;
-        font-family: "Raleway",sans-serif;
-        font-size:1em;
+        font-family: 'Merriweather', serif;
+        font-size: 1.2em;
         cursor: pointer;
       }
       .contact-element{
-        height: 13%;
+        height: 10%;
       }
       .contact-text {
         height: 30%;
       }
       .contact-btn {
         line-height: 1.5em;
-        font-size: 1em;
+        font-size: 1.2em;
+        font-weight: bold;
         background-color:  #a67c52;
         color: white;
         border: 2px solid white;
         transition:all .3s;
       }
       .contact button:hover {
-        color: black;
+        color: #000;
         background-color: #fff;
       }
     }
-    .contact-details{
-      flex-basis: 50%;
-      .social {
-        padding: 2% 0;
-        color: white;
-        span {
-          line-height: 4em;
-          padding-left: 4%;
-          font-size: 1.2em;
-        }
-      }
-      .fas{
-        font-size:1.5em;
-      }
+  }
+}
+
+.contact-details{
+  flex-basis:50%;
+  .social{
+    padding: 20px 0;
+    color: #fff;
+    a{
+      text-decoration: none;
+      color:#fff;
+      line-height: 4em;
+      padding-left: 15px;
+      font-size: 1.2em;
     }
+    .fas{
+      font-size:1.5em;  
+    }
+  }
+}
+
+@media screen and (max-width:1366px) and (orientation:landscape){
+  .contact{
+    height: 40vw;
   }
 }
 
@@ -73,9 +85,12 @@
 }
 @media screen and (max-width:992px){
   .contact{
-      
     height: 45vh;
+    .contact-element, .contact-btn, .contact-text{
+      font-size: 1em;
+    }
   }
+  
 }
 @media screen and (max-width:992px) and (orientation:landscape){
   .contact{
@@ -85,36 +100,49 @@
 }
 @media screen and (max-width:767px) {
   .contact {
-    padding:8%;
-    height: 55vh;
-  }
-  .contact-wrap {
-    flex-direction: column;
+    height: 70vh;
+    h2 {
+      font-size: 1.5em;
+      padding-bottom:30px;
     }
-  
-  .contact-element, .contact-btn, .contact-text{
-    font-size:.8em;
-    flex-basis: 80%;
+    .contact-wrap {
+      flex-direction: column;
+      .form-wrap{
+        flex-basis: 60%;
+        form{
+          height: 100%;
+          .contact-element{
+            height: 15%;
+          }
+          .contact-text {
+            height: 30%;
+          }
+        }
+      }
+      .contact-details{
+        flex-basis:30%;
+        margin-bottom: 10%;
+        .social {
+          padding: 0;
+          .fas{
+            font-size:1.2em;  
+          }
+        }
+      }
+    }
+  }
+} 
     
-    }
-    .contact-details{
-      width: 80%;
-    }
-  .contact-details .social span {
-    line-height: 2em;
-    font-size: 1em;
-  }
-  .contact-details .fas{
-    font-size:1em;
-  }
-}
 @media screen and (max-width:767px) and (orientation:landscape){
   .contact{
-    height: 75vw;
+    height: 85vw;
+    .contact-details{
+      margin-top:5%;
+    }
   }
 }
 @media screen and (max-width:360px){
   .contact{
-    height: 60vh;
+    height: 70vh;
   }
 }
